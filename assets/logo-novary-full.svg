@@ -1,0 +1,12 @@
+<svg width="390" height="82" viewBox="0 0 390 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="a" x1="0" y1="0" x2="70" y2="82"><stop stop-color="#1ED4FF"/><stop offset=".55" stop-color="#075CFF"/><stop offset="1" stop-color="#06165F"/></linearGradient>
+<filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g filter="url(#glow)">
+<path d="M9 8L30 20V74L9 62V8Z" fill="url(#a)"/>
+<path d="M72 8L51 20V74L72 62V8Z" fill="url(#a)"/>
+<path d="M9 8L72 62V74L9 20V8Z" fill="#075CFF"/>
+</g>
+<text x="100" y="53" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" letter-spacing="12">NOVARY</text>
+</svg>
