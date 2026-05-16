@@ -9,6 +9,11 @@ allScrollLinks.forEach(link => {
     if (!target) return;
     event.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Si es un link del navbar, marcarlo como activo inmediatamente
+    if (link.closest('.nav-links')) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    }
   });
 });
 
