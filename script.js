@@ -1,19 +1,23 @@
+// ===== NAV LINKS & SCROLL ACTIVE =====
 const navLinks = document.querySelectorAll('.nav-links a');
+const mobileLinks = document.querySelectorAll('.mobile-menu a');
 const allScrollLinks = document.querySelectorAll('a[href^="#"]');
 
 allScrollLinks.forEach(link => {
-  link.addEventListener('click', (event) => {
+  link.addEventListener('click', (e) => {
     const targetId = link.getAttribute('href');
     if (!targetId || targetId.length <= 1) return;
     const target = document.querySelector(targetId);
     if (!target) return;
-    event.preventDefault();
+    e.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // Si es un link del navbar, marcarlo como activo inmediatamente
     if (link.closest('.nav-links')) {
       navLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
     }
+    // close mobile menu on link click
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
   });
 });
 
@@ -26,11 +30,41 @@ const setActiveLink = () => {
   navLinks.forEach(link => {
     link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
   });
+  mobileLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+  });
 };
 window.addEventListener('scroll', setActiveLink);
 setActiveLink();
 
-const cards = document.querySelectorAll('.service-card, .stat-item, .talk-btn, .primary-btn, .ghost-btn, .project-grid article, .contact-action, .contact-form button');
+// ===== NAVBAR STICKY GLASSMORPHISM =====
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ===== HAMBURGER MENU =====
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger?.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+
+// ===== REVEAL ON SCROLL =====
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+
+// ===== HOVER GLOW CARDS =====
+const cards = document.querySelectorAll('.service-card,.stat-item,.contact-action,.contact-form button,.value-card,.project-card');
 cards.forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
@@ -39,10 +73,11 @@ cards.forEach(card => {
   });
 });
 
+// ===== CONTACT FORM =====
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
-form?.addEventListener('submit', (event) => {
-  event.preventDefault();
+form?.addEventListener('submit', (e) => {
+  e.preventDefault();
   const data = new FormData(form);
   const name = data.get('name')?.trim();
   const contact = data.get('contact')?.trim();
@@ -51,3 +86,4 @@ form?.addEventListener('submit', (event) => {
   status.textContent = 'Mensaje listo. Se abrirá WhatsApp para enviarlo.';
   window.open(`https://wa.me/595972983029?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
 });
+
