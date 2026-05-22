@@ -667,10 +667,11 @@ a { text-decoration: none; color: inherit; }
 }
 .tech-footer > span { font-size: 11px; color: #0069ff; font-weight: 700; letter-spacing: .8px; white-space: nowrap; }
 .techs { flex: 1; display: flex; justify-content: space-between; align-items: center; }
-.tech-item { display: flex; flex-direction: column; align-items: center; gap: 5px; opacity: .55; transition: opacity .25s ease; }
-.tech-item:hover { opacity: 1; }
-.tech-item svg { width: 28px; height: 28px; }
-.tech-item span { font-size: 10px; color: rgba(226,232,240,.6); font-weight: 500; }
+.tech-item { display: flex; flex-direction: row; align-items: center; gap: 8px; opacity: .4; transition: opacity .25s ease; }
+.tech-item:hover { opacity: .85; }
+.tech-item img { height: 20px; width: auto; filter: brightness(0) invert(1); }
+.tech-item span { font-size: 13px; color: rgba(226,232,240,.75); font-weight: 500; white-space: nowrap; }
+.aws-text { font-size: 15px; font-weight: 800; color: rgba(226,232,240,.75); letter-spacing: -0.5px; font-family: inherit; }
 
 /* ===== REVEAL ON SCROLL ===== */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
@@ -835,3 +836,6 @@ a { text-decoration: none; color: inherit; }
   .wa-fab { bottom: 18px; right: 16px; width: 50px; height: 50px; }
   .wa-fab svg { width: 26px; height: 26px; }
 }
+
+/* Next.js wordmark logo wider */
+.nextjs-logo { height: 16px; width: auto; }
