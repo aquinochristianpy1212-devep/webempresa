@@ -415,8 +415,11 @@ a { text-decoration: none; color: inherit; }
   flex: 1;
   overflow: hidden;
   display: -webkit-box;
+  /* stylelint-disable-next-line */
   -webkit-line-clamp: 3;
+  /* stylelint-disable-next-line */
   -webkit-box-orient: vertical;
+  line-clamp: 3;
 }
 .service-card a { font-size: 22px; color: #075dff; margin-top: 12px; flex-shrink: 0; align-self: flex-start; }
 .service-icon { width: 41px; height: 35px; position: relative; color: #075dff; flex-shrink: 0; }
@@ -777,10 +780,9 @@ a { text-decoration: none; color: inherit; }
   .hero-actions { flex-direction: row; flex-wrap: wrap; gap: 10px; }
   .primary-btn { height: 44px; font-size: 14px; padding: 0 20px; }
   .ghost-btn { height: 44px; font-size: 14px; padding: 0 18px; }
-  .hero-visual { order: 2; height: 200px; overflow: hidden; position: relative; }
-  .hero-visual img { width: 440px; max-width: 130%; right: 50%; transform: translateX(50%); top: -10px; }
-  .hero-visual::before, .hero-visual::after { display: none; }
+  .hero-visual { display: none; }
   .scroll-indicator { display: none; }
+  .hero h1 br { display: inline; }
   .stats { margin: 14px 12px 0; padding: 12px 8px; grid-template-columns: 1fr 1fr; gap: 8px; border-radius: 10px; }
   .stat-item { padding: 10px; gap: 10px; border-bottom: none !important; }
   .stat-item:nth-child(odd) { border-right: 1px solid rgba(148,163,184,.1); }
