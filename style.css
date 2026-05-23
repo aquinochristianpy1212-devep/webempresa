@@ -366,6 +366,7 @@ a { text-decoration: none; color: inherit; }
 .stat-icon img { width: 30px; height: 30px; }
 .globe-icon { font-size: 36px; color: #075dff; font-weight: 300; }
 .stat-item strong { display: block; font-size: 25px; line-height: 1; font-weight: 800; letter-spacing: -1px; }
+.stat-item .stat-label { font-size: 14px; letter-spacing: -.3px; font-weight: 700; line-height: 1.2; }
 .stat-item span { display: block; margin-top: 7px; color: rgba(226,232,240,.68); font-size: 13px; }
 
 /* ===== SERVICES ===== */
@@ -471,10 +472,11 @@ a { text-decoration: none; color: inherit; }
   border-color: rgba(7,93,255,.38);
   box-shadow: 0 0 28px rgba(7,93,255,.1);
 }
-.project-thumb { height: 140px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.project-thumb-1 { background: linear-gradient(135deg, #05112a 0%, #0a1f4a 60%, #071530 100%); }
-.project-thumb-2 { background: linear-gradient(135deg, #060e24 0%, #081630 60%, #04091a 100%); }
-.project-thumb-3 { background: linear-gradient(135deg, #040d22 0%, #091833 60%, #050e20 100%); }
+.project-thumb { height: 220px; position: relative; overflow: hidden; }
+.project-thumb svg { width: 100%; height: 100%; display: block; }
+.project-thumb-1 { background: #060e1e; }
+.project-thumb-2 { background: #060e1e; }
+.project-thumb-3 { background: #060e1e; }
 .pt-nav { position: absolute; top: 14px; left: 0; right: 0; height: 18px; background: rgba(7,93,255,.15); display: flex; align-items: center; gap: 6px; padding: 0 14px; }
 .pt-nav span { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,.3); }
 .pt-hero-block { position: absolute; top: 38px; left: 14px; right: 14px; height: 52px; border-radius: 5px; background: linear-gradient(90deg, rgba(7,93,255,.25), rgba(22,183,255,.1)); border: 1px solid rgba(7,93,255,.2); }

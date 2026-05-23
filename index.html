@@ -58,12 +58,16 @@
 
       <section class="stats glass-panel reveal">
         <article class="stat-item">
-          <div class="stat-icon"><img src="assets/icon-web.svg" alt=""></div>
-          <div><strong>+50</strong><span>Proyectos completados</span></div>
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="2" x2="12" y2="6" stroke="#075dff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="22" stroke="#075dff" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="12" x2="6" y2="12" stroke="#075dff" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="12" x2="22" y2="12" stroke="#075dff" stroke-width="2" stroke-linecap="round"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76" stroke="#075dff" stroke-width="2" stroke-linecap="round"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07" stroke="#075dff" stroke-width="2" stroke-linecap="round"/><line x1="19.07" y1="4.93" x2="16.24" y2="7.76" stroke="#075dff" stroke-width="2" stroke-linecap="round"/><line x1="7.76" y1="16.24" x2="4.93" y2="19.07" stroke="#075dff" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div><strong class="stat-label">Soluciones a medida</strong><span>Adaptadas a tu vision y metas</span></div>
         </article>
         <article class="stat-item">
-          <div class="stat-icon"><img src="assets/icon-users.svg" alt=""></div>
-          <div><strong>+30</strong><span>Clientes satisfechos</span></div>
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#075dff" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#075dff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div><strong class="stat-label">Atencion rapida</strong><span>Respuestas agiles y soporte real</span></div>
         </article>
         <article class="stat-item">
           <div class="stat-icon"><img src="assets/icon-rocket.svg" alt=""></div>
@@ -158,11 +162,125 @@
           <a href="#contacto" class="all-link">Ver todos <span>→</span></a>
         </div>
         <div class="project-grid">
+
+          <!-- CARD 1: Landing Page - Laptop fotorrealista -->
           <article class="project-card">
             <div class="project-thumb project-thumb-1">
-              <div class="pt-nav"><span></span><span></span><span></span></div>
-              <div class="pt-hero-block"></div>
-              <div class="pt-rows"><div></div><div></div><div></div></div>
+              <svg viewBox="0 0 440 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <defs>
+                  <linearGradient id="laptopBody" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a2744"/>
+                    <stop offset="100%" stop-color="#0d1628"/>
+                  </linearGradient>
+                  <linearGradient id="screenGlow" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#070f20"/>
+                    <stop offset="100%" stop-color="#040c1a"/>
+                  </linearGradient>
+                  <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#060e22"/>
+                    <stop offset="100%" stop-color="#03080f"/>
+                  </linearGradient>
+                  <filter id="laptopShadow">
+                    <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.7"/>
+                  </filter>
+                  <filter id="glowBlue">
+                    <feGaussianBlur stdDeviation="8" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <radialGradient id="heroGlow" cx="70%" cy="50%" r="60%">
+                    <stop offset="0%" stop-color="rgba(7,93,255,0.3)"/>
+                    <stop offset="100%" stop-color="rgba(7,93,255,0)"/>
+                  </radialGradient>
+                  <clipPath id="screenClip">
+                    <rect x="42" y="22" width="330" height="185" rx="4"/>
+                  </clipPath>
+                </defs>
+                <!-- laptop body with shadow -->
+                <g filter="url(#laptopShadow)">
+                  <rect x="26" y="12" width="362" height="210" rx="14" fill="url(#laptopBody)" stroke="#2a3d6a" stroke-width="1.5"/>
+                  <!-- screen frame -->
+                  <rect x="36" y="20" width="342" height="195" rx="6" fill="#080f1e" stroke="#1a2d50" stroke-width="1"/>
+                </g>
+                <!-- screen content clipped -->
+                <g clip-path="url(#screenClip)">
+                  <!-- full bg -->
+                  <rect x="42" y="22" width="330" height="185" fill="url(#heroGrad)"/>
+                  <!-- navbar -->
+                  <rect x="42" y="22" width="330" height="26" fill="#0a1830"/>
+                  <!-- nav brand -->
+                  <rect x="52" y="30" width="8" height="8" rx="2" fill="#075dff"/>
+                  <text x="63" y="38" font-family="Arial,sans-serif" font-size="7.5" fill="#fff" font-weight="700">Brand</text>
+                  <!-- nav links -->
+                  <text x="148" y="37" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.55)">Inicio</text>
+                  <text x="178" y="37" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.55)">Servicios</text>
+                  <text x="214" y="37" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.55)">Nosotros</text>
+                  <text x="252" y="37" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.55)">Blog</text>
+                  <!-- nav cta -->
+                  <rect x="300" y="27" width="44" height="13" rx="5" fill="#075dff"/>
+                  <text x="310" y="36" font-family="Arial,sans-serif" font-size="6" fill="#fff" font-weight="700">Contacto</text>
+                  <!-- HERO SECTION -->
+                  <rect x="42" y="48" width="330" height="100" fill="url(#heroGrad)"/>
+                  <!-- hero glow orb -->
+                  <ellipse cx="330" cy="90" rx="110" ry="70" fill="url(#heroGlow)"/>
+                  <ellipse cx="330" cy="90" rx="60" ry="40" fill="rgba(7,93,255,0.15)"/>
+                  <!-- hero badge -->
+                  <rect x="52" y="56" width="72" height="10" rx="5" fill="rgba(7,93,255,0.18)" stroke="rgba(7,93,255,0.35)" stroke-width="0.8"/>
+                  <circle cx="58" cy="61" r="2" fill="#075dff"/>
+                  <text x="63" y="64" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.7)">Soluciones digitales</text>
+                  <!-- hero heading -->
+                  <text x="52" y="80" font-family="Arial Black,sans-serif" font-size="14" fill="#ffffff" font-weight="900" letter-spacing="-0.5">Impulsa tu negocio</text>
+                  <text x="52" y="96" font-family="Arial Black,sans-serif" font-size="14" fill="#ffffff" font-weight="900" letter-spacing="-0.5">al siguiente nivel</text>
+                  <!-- subtext -->
+                  <text x="52" y="108" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.45)">Estrategias digitales que transforman ideas en</text>
+                  <text x="52" y="116" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.45)">experiencias memorables.</text>
+                  <!-- buttons -->
+                  <rect x="52" y="122" width="58" height="16" rx="6" fill="#075dff"/>
+                  <rect x="52" y="122" width="58" height="16" rx="6" fill="url(#btnGrad)" opacity="0.5"/>
+                  <text x="64" y="133" font-family="Arial,sans-serif" font-size="6.5" fill="#fff" font-weight="700">Descubre mas</text>
+                  <rect x="118" y="122" width="46" height="16" rx="6" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+                  <text x="128" y="133" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.7)">Ver mas</text>
+                  <!-- floating mockup laptop inside -->
+                  <rect x="250" y="50" width="114" height="88" rx="6" fill="#0c1e3a" stroke="#1e3a6a" stroke-width="1.2"/>
+                  <rect x="255" y="55" width="104" height="16" rx="3" fill="#101f38"/>
+                  <circle cx="262" cy="63" r="2.5" fill="#ff5f57" opacity="0.8"/>
+                  <circle cx="270" cy="63" r="2.5" fill="#febc2e" opacity="0.8"/>
+                  <circle cx="278" cy="63" r="2.5" fill="#28c840" opacity="0.8"/>
+                  <rect x="255" y="72" width="104" height="60" rx="2" fill="#08111e"/>
+                  <rect x="260" y="77" width="94" height="10" rx="3" fill="rgba(7,93,255,0.3)"/>
+                  <text x="264" y="84" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.5)">Impulsa tu negocio</text>
+                  <rect x="260" y="90" width="65" height="3.5" rx="1" fill="rgba(255,255,255,0.15)"/>
+                  <rect x="260" y="96" width="50" height="3.5" rx="1" fill="rgba(255,255,255,0.1)"/>
+                  <rect x="260" y="104" width="36" height="10" rx="3" fill="#075dff"/>
+                  <text x="264" y="111" font-family="Arial,sans-serif" font-size="5.5" fill="#fff">Ver mas</text>
+                  <!-- services section -->
+                  <rect x="42" y="148" width="330" height="60" fill="#050c1a"/>
+                  <!-- section title -->
+                  <text x="52" y="160" font-family="Arial,sans-serif" font-size="5" fill="#075dff" font-weight="700" letter-spacing="1">SERVICIOS</text>
+                  <text x="52" y="170" font-family="Arial Black,sans-serif" font-size="8" fill="#fff" font-weight="900">Nuestras soluciones</text>
+                  <!-- service cards -->
+                  <rect x="52" y="174" width="72" height="26" rx="4" fill="#0c1b35" stroke="#1a3560" stroke-width="0.8"/>
+                  <rect x="57" y="179" width="14" height="3" rx="1" fill="#075dff" opacity="0.7"/>
+                  <text x="57" y="188" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.8)" font-weight="600">Paginas Web</text>
+                  <text x="57" y="195" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.3)">Sitios modernos</text>
+                  <rect x="132" y="174" width="72" height="26" rx="4" fill="#0c1b35" stroke="#1a3560" stroke-width="0.8"/>
+                  <rect x="137" y="179" width="14" height="3" rx="1" fill="#075dff" opacity="0.7"/>
+                  <text x="137" y="188" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.8)" font-weight="600">Sistemas Web</text>
+                  <text x="137" y="195" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.3)">A tu medida</text>
+                  <rect x="212" y="174" width="72" height="26" rx="4" fill="#0c1b35" stroke="#1a3560" stroke-width="0.8"/>
+                  <rect x="217" y="179" width="14" height="3" rx="1" fill="#075dff" opacity="0.7"/>
+                  <text x="217" y="188" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.8)" font-weight="600">Apps Web</text>
+                  <text x="217" y="195" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.3)">Multiplataforma</text>
+                  <rect x="292" y="174" width="72" height="26" rx="4" fill="#0c1b35" stroke="#1a3560" stroke-width="0.8"/>
+                  <rect x="297" y="179" width="14" height="3" rx="1" fill="#075dff" opacity="0.7"/>
+                  <text x="297" y="188" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.8)" font-weight="600">Cloud</text>
+                  <text x="297" y="195" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.3)">Escalable</text>
+                </g>
+                <!-- laptop base/hinge -->
+                <rect x="145" y="222" width="124" height="8" rx="2" fill="#0e1e38" stroke="#1a2d50" stroke-width="1"/>
+                <rect x="100" y="228" width="214" height="5" rx="2" fill="#0a1628" stroke="#1a2d50" stroke-width="0.8"/>
+                <!-- reflection on screen -->
+                <rect x="36" y="20" width="342" height="195" rx="6" fill="url(#screenReflect)" opacity="0.04"/>
+              </svg>
             </div>
             <div class="project-info">
               <span class="project-tag">Landing Page</span>
@@ -171,13 +289,139 @@
               <a href="#contacto" class="project-link">Ver más →</a>
             </div>
           </article>
+
+          <!-- CARD 2: Dashboard Sistema -->
           <article class="project-card">
             <div class="project-thumb project-thumb-2">
-              <div class="pt-sidebar-strip"></div>
-              <div class="pt-dash-content">
-                <div class="pt-dash-row"><span></span><span></span><span></span></div>
-                <div class="pt-dash-table"><div></div><div></div><div></div><div></div></div>
-              </div>
+              <svg viewBox="0 0 440 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <defs>
+                  <linearGradient id="dashBg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#07111f"/>
+                    <stop offset="100%" stop-color="#040c18"/>
+                  </linearGradient>
+                  <filter id="dashShadow">
+                    <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.65"/>
+                  </filter>
+                  <clipPath id="dashClip">
+                    <rect x="18" y="12" width="400" height="226" rx="10"/>
+                  </clipPath>
+                  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="rgba(7,93,255,0.3)"/>
+                    <stop offset="100%" stop-color="rgba(7,93,255,0)"/>
+                  </linearGradient>
+                </defs>
+                <g filter="url(#dashShadow)">
+                  <rect x="18" y="12" width="400" height="226" rx="10" fill="url(#dashBg)" stroke="#1a3060" stroke-width="1.2"/>
+                </g>
+                <g clip-path="url(#dashClip)">
+                  <!-- sidebar -->
+                  <rect x="18" y="12" width="82" height="226" fill="#0a1628"/>
+                  <rect x="18" y="12" width="82" height="226" fill="#0a1628" stroke="#1a3060" stroke-width="0"/>
+                  <!-- sidebar logo -->
+                  <rect x="26" y="22" width="10" height="10" rx="3" fill="#075dff"/>
+                  <text x="40" y="30" font-family="Arial Black,sans-serif" font-size="7.5" fill="#fff" font-weight="900">Panel</text>
+                  <rect x="26" y="36" width="30" height="1" fill="rgba(255,255,255,0.08)"/>
+                  <!-- sidebar items -->
+                  <rect x="22" y="42" width="74" height="16" rx="4" fill="rgba(7,93,255,0.2)" stroke="rgba(7,93,255,0.3)" stroke-width="0.5"/>
+                  <rect x="28" y="47" width="5" height="5" rx="1" fill="#075dff"/>
+                  <text x="36" y="52" font-family="Arial,sans-serif" font-size="6" fill="#fff" font-weight="600">Dashboard</text>
+                  <rect x="28" y="62" width="5" height="5" rx="1" fill="rgba(255,255,255,0.25)"/>
+                  <text x="36" y="67" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.45)">Usuarios</text>
+                  <rect x="28" y="74" width="5" height="5" rx="1" fill="rgba(255,255,255,0.25)"/>
+                  <text x="36" y="79" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.45)">Reportes</text>
+                  <rect x="28" y="86" width="5" height="5" rx="1" fill="rgba(255,255,255,0.25)"/>
+                  <text x="36" y="91" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.45)">Ventas</text>
+                  <rect x="28" y="98" width="5" height="5" rx="1" fill="rgba(255,255,255,0.25)"/>
+                  <text x="36" y="103" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.45)">Productos</text>
+                  <rect x="28" y="110" width="5" height="5" rx="1" fill="rgba(255,255,255,0.25)"/>
+                  <text x="36" y="115" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.45)">Configuracion</text>
+                  <!-- main area -->
+                  <rect x="100" y="12" width="318" height="226" fill="#060e1c"/>
+                  <!-- topbar -->
+                  <rect x="100" y="12" width="318" height="24" fill="#0a1628" stroke="#1a3060" stroke-width="0"/>
+                  <rect x="100" y="34" width="318" height="1" fill="rgba(255,255,255,0.06)"/>
+                  <text x="110" y="27" font-family="Arial Black,sans-serif" font-size="10" fill="#fff" font-weight="900">Dashboard</text>
+                  <text x="350" y="27" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.4)">Hola, Admin ▾</text>
+                  <!-- stat cards -->
+                  <rect x="108" y="40" width="70" height="36" rx="5" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="114" y="52" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.4)">Ventas totales</text>
+                  <text x="114" y="65" font-family="Arial Black,sans-serif" font-size="9" fill="#fff" font-weight="900">$248,750</text>
+                  <text x="154" y="65" font-family="Arial,sans-serif" font-size="5" fill="#22c55e" font-weight="700"> +12.5%</text>
+                  <rect x="184" y="40" width="68" height="36" rx="5" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="190" y="52" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.4)">Usuarios</text>
+                  <text x="190" y="65" font-family="Arial Black,sans-serif" font-size="9" fill="#fff" font-weight="900">1,250</text>
+                  <text x="218" y="65" font-family="Arial,sans-serif" font-size="5" fill="#22c55e" font-weight="700"> +8.2%</text>
+                  <rect x="258" y="40" width="68" height="36" rx="5" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="264" y="52" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.4)">Pedidos</text>
+                  <text x="264" y="65" font-family="Arial Black,sans-serif" font-size="9" fill="#fff" font-weight="900">4,220</text>
+                  <text x="292" y="65" font-family="Arial,sans-serif" font-size="5" fill="#22c55e" font-weight="700"> +15.7%</text>
+                  <rect x="332" y="40" width="74" height="36" rx="5" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="338" y="52" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.4)">Productos</text>
+                  <text x="338" y="65" font-family="Arial Black,sans-serif" font-size="9" fill="#fff" font-weight="900">320</text>
+                  <text x="358" y="65" font-family="Arial,sans-serif" font-size="5" fill="#22c55e" font-weight="700"> +3.7%</text>
+                  <!-- chart area left -->
+                  <rect x="108" y="82" width="188" height="96" rx="5" fill="#0a1628" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="116" y="94" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.55)" font-weight="600">Ventas en los ultimos 7 dias</text>
+                  <!-- y axis labels -->
+                  <text x="110" y="110" font-family="Arial,sans-serif" font-size="4" fill="rgba(255,255,255,0.2)">400</text>
+                  <text x="110" y="124" font-family="Arial,sans-serif" font-size="4" fill="rgba(255,255,255,0.2)">300</text>
+                  <text x="110" y="138" font-family="Arial,sans-serif" font-size="4" fill="rgba(255,255,255,0.2)">200</text>
+                  <text x="110" y="152" font-family="Arial,sans-serif" font-size="4" fill="rgba(255,255,255,0.2)">100</text>
+                  <!-- grid lines -->
+                  <line x1="122" y1="106" x2="290" y2="106" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                  <line x1="122" y1="120" x2="290" y2="120" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                  <line x1="122" y1="134" x2="290" y2="134" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                  <line x1="122" y1="148" x2="290" y2="148" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                  <!-- chart area fill -->
+                  <polygon points="122,148 146,136 168,140 190,122 212,128 234,110 256,116 278,100 290,104 290,160 122,160" fill="url(#chartFill)"/>
+                  <!-- chart line -->
+                  <polyline points="122,148 146,136 168,140 190,122 212,128 234,110 256,116 278,100 290,104" stroke="#075dff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- dots on chart -->
+                  <circle cx="122" cy="148" r="2.5" fill="#075dff" stroke="#060e1c" stroke-width="1.5"/>
+                  <circle cx="190" cy="122" r="2.5" fill="#075dff" stroke="#060e1c" stroke-width="1.5"/>
+                  <circle cx="278" cy="100" r="3" fill="#fff" stroke="#075dff" stroke-width="1.5"/>
+                  <!-- x axis -->
+                  <text x="122" y="170" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)">Lun</text>
+                  <text x="144" y="170" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)">Mar</text>
+                  <text x="166" y="170" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)">Mie</text>
+                  <text x="188" y="170" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)">Jue</text>
+                  <text x="210" y="170" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)">Vie</text>
+                  <text x="232" y="170" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)">Sab</text>
+                  <text x="256" y="170" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.25)">Dom</text>
+                  <!-- donut chart right -->
+                  <rect x="302" y="82" width="106" height="96" rx="5" fill="#0a1628" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="310" y="94" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.55)" font-weight="600">Ventas por canal</text>
+                  <!-- donut -->
+                  <circle cx="335" cy="134" r="28" fill="none" stroke="#1e3a6a" stroke-width="12"/>
+                  <circle cx="335" cy="134" r="28" fill="none" stroke="#075dff" stroke-width="12" stroke-dasharray="105 71" stroke-dashoffset="25" opacity="0.9"/>
+                  <circle cx="335" cy="134" r="28" fill="none" stroke="#16b7ff" stroke-width="12" stroke-dasharray="44 132" stroke-dashoffset="-100" opacity="0.75"/>
+                  <circle cx="335" cy="134" r="28" fill="none" stroke="#0a2a50" stroke-width="12" stroke-dasharray="27 149" stroke-dashoffset="-144" opacity="0.9"/>
+                  <!-- donut center -->
+                  <circle cx="335" cy="134" r="16" fill="#0a1628"/>
+                  <text x="335" y="131" font-family="Arial Black,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="900">60%</text>
+                  <text x="335" y="139" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.4)" text-anchor="middle">Web</text>
+                  <!-- legend -->
+                  <rect x="368" y="108" width="5" height="5" rx="1" fill="#075dff"/>
+                  <text x="376" y="113" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.5)">Web 60%</text>
+                  <rect x="368" y="118" width="5" height="5" rx="1" fill="#16b7ff"/>
+                  <text x="376" y="123" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.5)">Movil 25%</text>
+                  <rect x="368" y="128" width="5" height="5" rx="1" fill="#0a2a50"/>
+                  <text x="376" y="133" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.5)">Tienda 15%</text>
+                  <!-- activity table -->
+                  <rect x="108" y="184" width="300" height="48" rx="5" fill="#0a1628" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="116" y="196" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.55)" font-weight="600">Actividad reciente</text>
+                  <line x1="108" y1="200" x2="408" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                  <text x="116" y="210" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.28)">Usuario</text>
+                  <text x="196" y="210" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.28)">Accion</text>
+                  <text x="270" y="210" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.28)">Detalle</text>
+                  <text x="360" y="210" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.28)">Fecha</text>
+                  <line x1="108" y1="213" x2="408" y2="213" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                  <text x="116" y="224" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.65)">Ana Gomez</text>
+                  <text x="196" y="224" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.65)">Nueva venta</text>
+                  <text x="270" y="224" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.65)">Orden #1125</text>
+                  <text x="360" y="224" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.65)">12 May, 2024</text>
+                </g>
+              </svg>
             </div>
             <div class="project-info">
               <span class="project-tag">Sistema</span>
@@ -186,13 +430,163 @@
               <a href="#contacto" class="project-link">Ver más →</a>
             </div>
           </article>
+
+          <!-- CARD 3: App Web / Dispositivos -->
           <article class="project-card">
             <div class="project-thumb project-thumb-3">
-              <div class="pt-mobile-frame">
-                <div class="pt-m-bar"></div>
-                <div class="pt-m-card"></div>
-                <div class="pt-m-card short"></div>
-              </div>
+              <svg viewBox="0 0 440 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <defs>
+                  <linearGradient id="appBg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#070e1e"/>
+                    <stop offset="100%" stop-color="#040b16"/>
+                  </linearGradient>
+                  <filter id="appShadow">
+                    <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.6"/>
+                  </filter>
+                  <clipPath id="desktopClip">
+                    <rect x="18" y="14" width="222" height="180" rx="8"/>
+                  </clipPath>
+                  <clipPath id="phone1Clip">
+                    <rect x="254" y="18" width="84" height="162" rx="12"/>
+                  </clipPath>
+                  <clipPath id="phone2Clip">
+                    <rect x="350" y="36" width="68" height="134" rx="10"/>
+                  </clipPath>
+                  <linearGradient id="appGlow" cx="50%" cy="0%" r="80%" gradientUnits="objectBoundingBox">
+                    <stop offset="0%" stop-color="rgba(7,93,255,0.2)"/>
+                    <stop offset="100%" stop-color="rgba(7,93,255,0)"/>
+                  </linearGradient>
+                </defs>
+                <!-- DESKTOP app -->
+                <g filter="url(#appShadow)">
+                  <rect x="18" y="14" width="222" height="180" rx="8" fill="#0a1628" stroke="#1e3560" stroke-width="1.2"/>
+                </g>
+                <g clip-path="url(#desktopClip)">
+                  <rect x="18" y="14" width="222" height="180" fill="#07101e"/>
+                  <!-- topbar -->
+                  <rect x="18" y="14" width="222" height="20" fill="#0d1f3c"/>
+                  <circle cx="28" cy="24" r="3" fill="#ff5f57" opacity="0.9"/>
+                  <circle cx="37" cy="24" r="3" fill="#febc2e" opacity="0.9"/>
+                  <circle cx="46" cy="24" r="3" fill="#28c840" opacity="0.9"/>
+                  <text x="120" y="27" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.5)" text-anchor="middle">Panel de Proyectos</text>
+                  <!-- sidebar -->
+                  <rect x="18" y="34" width="48" height="160" fill="#0a1628" stroke="#1a3060" stroke-width="0"/>
+                  <rect x="18" y="34" width="48" height="160" fill="#0a1628"/>
+                  <rect x="22" y="40" width="40" height="15" rx="3" fill="rgba(7,93,255,0.2)" stroke="rgba(7,93,255,0.25)" stroke-width="0.5"/>
+                  <rect x="26" y="44" width="5" height="5" rx="1" fill="#075dff"/>
+                  <text x="34" y="50" font-family="Arial,sans-serif" font-size="5" fill="#fff">Inicio</text>
+                  <rect x="26" y="58" width="5" height="5" rx="1" fill="rgba(255,255,255,0.2)"/>
+                  <text x="34" y="63" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.4)">Proyectos</text>
+                  <rect x="26" y="70" width="5" height="5" rx="1" fill="rgba(255,255,255,0.2)"/>
+                  <text x="34" y="75" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.4)">Tareas</text>
+                  <rect x="26" y="82" width="5" height="5" rx="1" fill="rgba(255,255,255,0.2)"/>
+                  <text x="34" y="87" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.4)">Calendario</text>
+                  <rect x="26" y="94" width="5" height="5" rx="1" fill="rgba(255,255,255,0.2)"/>
+                  <text x="34" y="99" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.4)">Mensajes</text>
+                  <rect x="26" y="106" width="5" height="5" rx="1" fill="rgba(255,255,255,0.2)"/>
+                  <text x="34" y="111" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.4)">Config</text>
+                  <!-- divider -->
+                  <line x1="66" y1="34" x2="66" y2="194" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                  <!-- main content -->
+                  <rect x="66" y="34" width="174" height="160" fill="#060e1a"/>
+                  <!-- header row -->
+                  <text x="74" y="46" font-family="Arial Black,sans-serif" font-size="9" fill="#fff" font-weight="900">Proyectos</text>
+                  <rect x="170" y="37" width="62" height="13" rx="5" fill="#075dff"/>
+                  <text x="177" y="46" font-family="Arial,sans-serif" font-size="5.5" fill="#fff" font-weight="700">+ Nuevo proyecto</text>
+                  <!-- search -->
+                  <rect x="74" y="52" width="158" height="10" rx="3" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="79" y="59" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.2)">Buscar proyecto...</text>
+                  <!-- project rows -->
+                  <rect x="74" y="67" width="158" height="22" rx="4" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="80" y="79" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.85)" font-weight="600">Rediseno web</text>
+                  <rect x="164" y="70" width="32" height="9" rx="3" fill="rgba(7,93,255,0.25)"/>
+                  <text x="167" y="77" font-family="Arial,sans-serif" font-size="4.5" fill="#16b7ff">En proceso</text>
+                  <rect x="200" y="72" width="24" height="5" rx="1" fill="rgba(7,93,255,0.15)"/>
+                  <rect x="200" y="72" width="16" height="5" rx="1" fill="#075dff"/>
+                  <text x="80" y="86" font-family="Arial,sans-serif" font-size="4" fill="rgba(255,255,255,0.28)">Actualizado hoy 22 May</text>
+                  <rect x="74" y="93" width="158" height="22" rx="4" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="80" y="105" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.85)" font-weight="600">App movil</text>
+                  <rect x="164" y="96" width="32" height="9" rx="3" fill="rgba(34,197,94,0.15)"/>
+                  <text x="167" y="103" font-family="Arial,sans-serif" font-size="4.5" fill="#22c55e">Completado</text>
+                  <rect x="200" y="98" width="24" height="5" rx="1" fill="rgba(34,197,94,0.15)"/>
+                  <rect x="200" y="98" width="24" height="5" rx="1" fill="#22c55e" opacity="0.8"/>
+                  <text x="80" y="112" font-family="Arial,sans-serif" font-size="4" fill="rgba(255,255,255,0.28)">Actualizado 30 Abr</text>
+                  <rect x="74" y="119" width="158" height="22" rx="4" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="80" y="131" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.85)" font-weight="600">Campana Q2</text>
+                  <rect x="164" y="122" width="32" height="9" rx="3" fill="rgba(251,191,36,0.15)"/>
+                  <text x="168" y="129" font-family="Arial,sans-serif" font-size="4.5" fill="#fbbf24">Pendiente</text>
+                  <rect x="200" y="124" width="24" height="5" rx="1" fill="rgba(251,191,36,0.1)"/>
+                  <rect x="200" y="124" width="9" height="5" rx="1" fill="#fbbf24" opacity="0.8"/>
+                  <rect x="74" y="145" width="158" height="22" rx="4" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="80" y="157" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.85)" font-weight="600">Integracion API</text>
+                  <rect x="164" y="148" width="32" height="9" rx="3" fill="rgba(7,93,255,0.25)"/>
+                  <text x="167" y="155" font-family="Arial,sans-serif" font-size="4.5" fill="#16b7ff">En proceso</text>
+                  <rect x="200" y="150" width="24" height="5" rx="1" fill="rgba(7,93,255,0.15)"/>
+                  <rect x="200" y="150" width="13" height="5" rx="1" fill="#075dff"/>
+                  <text x="80" y="164" font-family="Arial,sans-serif" font-size="4" fill="rgba(255,255,255,0.28)">Actualizado 18 May</text>
+                </g>
+                <!-- PHONE 1 -->
+                <g filter="url(#appShadow)">
+                  <rect x="254" y="18" width="84" height="162" rx="12" fill="#0a1628" stroke="#1e3560" stroke-width="1.2"/>
+                </g>
+                <g clip-path="url(#phone1Clip)">
+                  <rect x="254" y="18" width="84" height="162" fill="#07101e"/>
+                  <!-- notch -->
+                  <rect x="282" y="20" width="28" height="5" rx="2.5" fill="#0d1f3c"/>
+                  <!-- topbar -->
+                  <rect x="254" y="25" width="84" height="16" fill="#0d1f3c"/>
+                  <text x="296" y="35" font-family="Arial,sans-serif" font-size="6" fill="rgba(255,255,255,0.5)" text-anchor="middle">Resumen</text>
+                  <!-- content -->
+                  <text x="260" y="52" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.35)">Tarea del dia</text>
+                  <rect x="260" y="56" width="70" height="14" rx="3" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="265" y="65" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.75)">Revisar diseno</text>
+                  <rect x="260" y="73" width="70" height="14" rx="3" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="265" y="82" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.75)">Reunion con equipo</text>
+                  <rect x="260" y="90" width="70" height="14" rx="3" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="265" y="99" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.75)">Enviar propuesta</text>
+                  <text x="260" y="115" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.35)">Proyectos activos</text>
+                  <rect x="260" y="119" width="70" height="12" rx="3" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="265" y="127" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.75)">App movil</text>
+                  <rect x="300" y="122" width="24" height="5" rx="1" fill="rgba(7,93,255,0.15)"/>
+                  <rect x="300" y="122" width="17" height="5" rx="1" fill="#075dff"/>
+                  <rect x="260" y="134" width="70" height="12" rx="3" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="265" y="142" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.75)">Integracion API</text>
+                  <rect x="300" y="137" width="24" height="5" rx="1" fill="rgba(251,191,36,0.1)"/>
+                  <rect x="300" y="137" width="9" height="5" rx="1" fill="#fbbf24"/>
+                  <!-- bottom nav -->
+                  <rect x="254" y="162" width="84" height="18" fill="#0d1f3c"/>
+                  <text x="267" y="174" font-family="Arial,sans-serif" font-size="9" fill="#075dff">⊞</text>
+                  <text x="284" y="174" font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)">◎</text>
+                  <text x="300" y="174" font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)">☰</text>
+                  <text x="316" y="174" font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)">◈</text>
+                </g>
+                <!-- PHONE 2 smaller -->
+                <g filter="url(#appShadow)">
+                  <rect x="350" y="36" width="68" height="134" rx="10" fill="#0a1628" stroke="#1e3560" stroke-width="1"/>
+                </g>
+                <g clip-path="url(#phone2Clip)">
+                  <rect x="350" y="36" width="68" height="134" fill="#07101e"/>
+                  <rect x="368" y="38" width="30" height="4" rx="2" fill="#0d1f3c"/>
+                  <rect x="350" y="42" width="68" height="14" fill="#0d1f3c"/>
+                  <text x="384" y="51" font-family="Arial,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">Hola, Gio</text>
+                  <!-- summary card -->
+                  <rect x="356" y="60" width="56" height="28" rx="4" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="362" y="72" font-family="Arial,sans-serif" font-size="4.5" fill="rgba(255,255,255,0.35)">Resumen</text>
+                  <text x="362" y="83" font-family="Arial Black,sans-serif" font-size="8" fill="#fff" font-weight="900">$12,480</text>
+                  <rect x="356" y="92" width="56" height="14" rx="3" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="362" y="101" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.6)">3 tareas pendientes</text>
+                  <rect x="356" y="109" width="56" height="14" rx="3" fill="#0c1b35" stroke="#1e3a6a" stroke-width="0.8"/>
+                  <text x="362" y="118" font-family="Arial,sans-serif" font-size="5" fill="rgba(255,255,255,0.6)">2 mensajes nuevos</text>
+                  <rect x="356" y="126" width="56" height="14" rx="3" fill="#075dff" opacity="0.85"/>
+                  <text x="384" y="135" font-family="Arial,sans-serif" font-size="5" fill="#fff" text-anchor="middle" font-weight="700">Ver todo →</text>
+                  <!-- bottom nav -->
+                  <rect x="350" y="154" width="68" height="16" fill="#0d1f3c"/>
+                  <text x="358" y="164" font-family="Arial,sans-serif" font-size="8" fill="#075dff">⊞</text>
+                  <text x="372" y="164" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.25)">◎</text>
+                  <text x="386" y="164" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.25)">☰</text>
+                  <text x="400" y="164" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.25)">◈</text>
+                </g>
+              </svg>
             </div>
             <div class="project-info">
               <span class="project-tag">App Web</span>
@@ -201,7 +595,9 @@
               <a href="#contacto" class="project-link">Ver más →</a>
             </div>
           </article>
+
         </div>
+
       </section>
 
       <section id="contacto" class="content-section contact-section contact-premium reveal">
