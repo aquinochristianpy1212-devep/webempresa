@@ -345,7 +345,6 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
 }
 .stat-item {
-  height: 51px;
   display: flex;
   align-items: center;
   gap: 18px;
@@ -746,8 +745,7 @@ a { text-decoration: none; color: inherit; }
   .stat-icon img { width: 24px; height: 24px; }
   .globe-icon { font-size: 28px; }
   .stat-item strong { font-size: 22px; }
-  .stat-item .stat-label { font-size: 12px; line-height: 1.25; word-break: break-word; }
-  .stat-item span { font-size: 12px; word-break: break-word; }
+  .stat-item span { font-size: 12px; }
   .services { margin: 22px 14px 0; grid-template-columns: 1fr; gap: 24px; }
   .service-grid { grid-template-columns: 1fr 1fr; }
   .services-intro h2 { font-size: 27px; }
@@ -787,18 +785,18 @@ a { text-decoration: none; color: inherit; }
   .hero-visual { display: none; }
   .scroll-indicator { display: none; }
   .hero h1 br { display: inline; }
-  .stats { margin: 14px 12px 0; padding: 12px 8px; grid-template-columns: 1fr 1fr; gap: 8px; border-radius: 10px; }
-  .stat-item { padding: 10px; gap: 10px; border-bottom: none !important; overflow: hidden; }
+  .stats { margin: 14px 12px 0; padding: 8px 4px; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 10px; height: auto; align-items: stretch; }
+  .stat-item { padding: 12px 10px; gap: 10px; border-bottom: none !important; align-items: flex-start; height: auto; min-height: 0; }
+  .stat-item > div { min-width: 0; flex: 1; }
   .stat-item:nth-child(odd) { border-right: 1px solid rgba(148,163,184,.1); }
   .stat-item:nth-child(even) { border-right: none; }
   .stat-item:nth-child(1), .stat-item:nth-child(2) { border-bottom: 1px solid rgba(148,163,184,.1) !important; }
-  .stat-icon { width: 36px; height: 36px; }
-  .stat-icon img { width: 20px; height: 20px; }
-  .globe-icon { font-size: 24px; }
-  .stat-item strong { font-size: 20px; }
-  .stat-item .stat-label { font-size: 11px; line-height: 1.2; word-break: break-word; }
-  .stat-item span { font-size: 11px; margin-top: 4px; word-break: break-word; }
-  .stat-item > div { min-width: 0; overflow: hidden; }
+  .stat-icon { width: 34px; height: 34px; flex-shrink: 0; min-width: 34px; }
+  .stat-icon img { width: 18px; height: 18px; }
+  .globe-icon { font-size: 20px; }
+  .stat-item strong { font-size: 18px; }
+  .stat-item .stat-label { font-size: 11px; line-height: 1.3; font-weight: 700; }
+  .stat-item span { font-size: 10px; margin-top: 3px; line-height: 1.4; }
   .services { margin: 18px 12px 0; gap: 18px; }
   .services-intro h2 { font-size: 24px; }
   .services-intro p { font-size: 13px; }
